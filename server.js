@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 // Static content
-app.use(express.static('public'));
+app.use(express.static('./public'));
 
 // Parse bodies as JSON
 app.use(express.urlencoded({ extended: true }));

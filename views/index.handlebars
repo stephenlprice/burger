@@ -1,21 +1,21 @@
 <h1>Burgers I/O</h1>
 
-<h2>Burgers I have Eaten:</h2>
-
-<ul>
-  {{#each burger}}
-  {{#unless devoured}}
-  {{> partials/burger devoured=true}}
-  {{/unless}}
-  {{/each}}
-</ul>
-
 <h2>Burgers I have not Eaten:</h2>
 
 <ul>
   {{#each burger}}
+  {{#unless devoured}}
+  {{> burger devoured=false}}
+  {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers I have Eaten:</h2>
+
+<ul>
+  {{#each burger}}
   {{#if devoured}}
-  {{> partials/burger devoured=false}}
+  {{> burger devoured=true}}
   {{/if}}
   {{/each}}
 </ul>
