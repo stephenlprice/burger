@@ -1,0 +1,38 @@
+<h1>Burgers I/O</h1>
+
+<h2>Burgers I have Eaten:</h2>
+
+<ul>
+  {{#each burger}}
+  {{#unless devoured}}
+  {{> partials/burger devoured=true}}
+  {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>Burgers I have not Eaten:</h2>
+
+<ul>
+  {{#each burger}}
+  {{#if devoured}}
+  {{> partials/burger devoured=false}}
+  {{/if}}
+  {{/each}}
+</ul>
+
+<h2>Add a Burger</h2>
+<form id="create-form">
+
+  <div class="form-group">
+    <label for="burger">Burger Name:</label>
+    <input type="text" id="burger" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="eaten">Devoured?</label><br>
+    <input type="radio" name="eaten" value="1" id="eaten" checked> Eaten!<br>
+    <input type="radio" name="not-eaten" value="0" id="not-eaten"> Uneaten
+  </div>
+
+  <button type="submit">Add Burger</button>
+</form>
