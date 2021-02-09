@@ -22,17 +22,17 @@
 
 <h2>Add a Burger</h2>
 <form id="create-form">
+    <div class="form-group">
+        <label for="burger">Name:</label>
+        <input type="text" id="burger" name="name">
+    </div>
 
-  <div class="form-group">
-    <label for="burger">Burger Name:</label>
-    <input type="text" id="burger" name="name">
-  </div>
+    <div class="form-group" action="/api/burgers" method="post">
+        <label for="eaten">Eaten</label>
+        <input type="radio" name="eaten" value="1" id="eaten" checked></input><br>
+        <label for="eaten">Uneaten</label>
+        <input type="radio" name="not-eaten" value="0" id="not-eaten">
+    </div>
 
-  <div class="form-group">
-    <label for="eaten">Devoured?</label><br>
-    <input type="radio" name="eaten" value="1" id="eaten" checked> Eaten!<br>
-    <input type="radio" name="not-eaten" value="0" id="not-eaten"> Uneaten
-  </div>
-
-  <button type="submit">Add Burger</button>
+    <button type="submit">Add Burger</button>
 </form>
