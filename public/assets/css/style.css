@@ -1,3 +1,39 @@
+/* font-family: 'Cookie', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Roboto', sans-serif; */
+
+body {
+    font-family: 'Roboto', sans-serif;  
+}
+
 h1 {
     font-size: xx-large;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Cookie', cursive;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+li div.card {
+    width: 100%;
+}
+
+.card-header {
+    font-family: 'Roboto', cursive;
+    text-align: center;
+}
+
+i.fas.fa-hamburger:hover {
+    color: red;
+}
+
+button.change-devoured:hover {
+    color: red;
 }

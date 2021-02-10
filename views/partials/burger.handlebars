@@ -1,6 +1,18 @@
-<li>
-	{{ name }}
-	<button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
-		{{#if devoured}} CARRY OUT...{{else}} EAT NOW!{{/if}}
-	</button>
+
+<li class="d-flex justify-content-center">
+	<div class="card border-light mb-3" style="max-width: 18rem;">
+		<div class="card-header">{{ name }}</div>
+		<div class="card-body d-flex justify-content-center">
+			<div class="row">
+				<div class="col-10 d-flex justify-content-center flex-shrink-1">
+					<i class="fas fa-hamburger fa-5x"></i>
+				</div>
+				<div class="col-2 d-flex justify-content-center flex-shrink-1">
+					<button class="change-devoured btn btn-light bg-transparent border-0" data-id="{{id}}" data-newdevoured="{{devoured}}" data-display="hide">
+						{{#if devoured}}<span class="save-later"><i class="fas fa-shopping-bag fa-2x"></span></i>{{else}}<span class="eat-now"><i class="fas fa-teeth-open fa-2x"></i></span>{{/if}}
+					</button>		
+				</div>
+			</div>
+		</div>
+	</div>
 </li>
