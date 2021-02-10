@@ -16,24 +16,34 @@ h2 {
     font-family: 'Cookie', cursive;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 0px;
-}
-
-li div.card {
+div.card {
     width: 100%;
 }
 
 .card-header {
     font-family: 'Roboto', cursive;
     text-align: center;
+    min-height: 4rem;
+    background-color: #CF3721;
+}
+
+i.fas.fa-hamburger {
+    color: #F5BE41;;
 }
 
 i.fas.fa-hamburger:hover {
-    color: red;
+    color: #CF3721;
+}
+
+button.change-devoured {
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 button.change-devoured:hover {
-    color: red;
+    color: #31A9B8
+}
+
+nav#heading {
+    background-color: #CF3721;
 }

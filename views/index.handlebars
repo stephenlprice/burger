@@ -1,34 +1,49 @@
 <!-- As a heading -->
-<nav class="navbar navbar-dark bg-danger">
-  <div class="container-fluid d-flex justify-content-around">
+<nav id="heading" class="navbar navbar-dark">
+  <div class="container-fluid ">
     <span class="navbar-brand mb-0 h1"><h1>BURGERS I/O</h1></span>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   </div>
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="p-4">
+        <h5 class="text-white h4">Collapsed content</h5>
+        <span class="text-muted">Toggleable via the navbar brand.</span>
+      </div>
+    </div>
 </nav>
 <br>
+
+
 
 <div class="container">
   <div class="row">
     <div class="col-12 col-sm-6">
       <h2 class="d-flex justify-content-around">Uneaten Burgers</h2>
-      <ul>
+      <div class="row">
         {{#each burger}}
         {{#unless devoured}}
-        {{> burger devoured=false}}
+          <div class="col-12 col-md-6">
+            {{> burger devoured=false}}
+          </div>
         {{/unless}}
         {{/each}}
-      </ul>
+      </div>
     </div>
     <div class="col-12 col-sm-6">
       <h2 class="d-flex justify-content-around">Eaten Burgers</h2>
-      <ul>
+      <div class="row">
         {{#each burger}}
         {{#if devoured}}
-        {{> burger devoured=true}}
+          <div class="col-12 col-md-6">
+            {{> burger devoured=true}}
+          </div>
         {{/if}}
         {{/each}}
-      </ul>
+      </div>
     </div>
-    <div class="col-12 col-sm-12">
+    <div class="col-12">
       <h2>Add a Burger</h2>
       <form id="create-form">
           <div class="form-group">
