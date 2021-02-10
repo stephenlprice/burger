@@ -1,7 +1,7 @@
 INSERT INTO burger_db.burger (name, devoured) 
 VALUES 
-("La Hamburguesa de Romero's", true),
-("Las Hamburguesas de Rusty", true),
+("Hamburguesa de Romero's", true),
+("Hamburguesa de Rusty", true),
 ("Homemade So-So Burger", true),
 ("Whataburger Patty Melt", false),
 ("P. Terry's Double Cheeseburger", false),
