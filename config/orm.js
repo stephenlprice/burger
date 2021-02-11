@@ -10,8 +10,8 @@ const selectAll = (table, data) => {
 
 const insertOne = (name, devoured, data) => {
     const query = 
-    `INSERT INTO burger_db.burger (${name}, ${devoured})
-    VALUES (${name}, ${devoured});`;
+    `INSERT INTO burger_db.burger (name, devoured)
+    VALUES ("${name}", ${devoured});`;
     connection.query(query, (err, result) => {
         if (err) { throw err; }
         data(result);

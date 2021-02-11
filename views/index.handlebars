@@ -8,20 +8,21 @@
   </div>
   <div class="collapse" id="navbarToggleExternalContent">
       <div class="p-4">
-        <form class="text-white" id="create-form"></form>
+        <form class="text-white" id="create-form">
           <div class="row g-3 align-items-center">
             <div class="col">
               <h2 class="text-white">Add a Burger</h2>
-              <input type="text" id="burger" name="name" class="form-control" placeholder="Name" aria-label="Burger Name">
+              <input type="text" id="burgerName" name="name" class="form-control" placeholder="Name" aria-label="Burger Name">
             </div>
             <div class="col">
               <div class="form-check form-switch form-control-lg">
-                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                <input id="devoured-check" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                 <label class="form-check-label text-white" for="flexSwitchCheckDefault">Eaten?</label>
               </div>
               <button id="add" type="submit" class="btn border-white"><i class="fas fa-plus-circle"></i> Add Burger</button>
             </div>
           </div>
+        </form>
         </form>
       </div>
     </div>

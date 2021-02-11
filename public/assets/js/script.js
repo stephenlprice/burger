@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
           }).then((response) => {
             if (response.ok) {
               console.log(`changed devoured for: ${newEat}`);
-              location.reload('/');
+              location.reload('');
             } else {
               alert('something went wrong!');
             }
@@ -88,57 +88,40 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   
     // CREATE
-    const createCatBtn = document.getElementById('create-form');
+    const addBurger = document.getElementById('add');
   
-    if (createCatBtn) {
-      createCatBtn.addEventListener('submit', (e) => {
+    if (addBurger) {
+      console.log(addBurger);
+      addBurger.addEventListener('click', (e) => {
         e.preventDefault();
-  
-        // Grabs the value of the textarea that goes by the name, "quote"
-        const newCat = {
-          name: document.getElementById('ca').value.trim(),
-          sleepy: document.getElementById('sleepy').checked,
+
+        const name = document.getElementById('burgerName').value.trim();
+        const devoured = document.getElementById('devoured-check').checked;
+        console.log(name, devoured);
+
+        const newBurger = {
+          name: name,
+          devoured: devoured,
         };
   
-        // Send POST request to create a new quote
-        fetch('/api/cats', {
+        // New hamburger
+        fetch('/api/burgers/', {
           method: 'POST',
           headers: {
             Accept: 'application/json',
             'Content-Type': 'application/json',
           },
   
-          // make sure to serialize the JSON body
-          body: JSON.stringify(newCat),
+          // Serialize the JSON body
+          body: JSON.stringify(newBurger),
         }).then(() => {
           // Empty the form
-          document.getElementById('ca').value = '';
+          document.getElementById('burgerName').value = '';
   
           // Reload the page so the user can see the new quote
-          console.log('Created a new cat!');
-          location.reload();
+          console.log('Added a new hamburger!');
+          location.reload('');
         });
       });
     }
-  
-    // DELETE
-    const deleteCatBtns = document.querySelectorAll('.delete-cat');
-  
-    // Set up the event listeners for each delete button
-    deleteCatBtns.forEach((button) => {
-      button.addEventListener('click', (e) => {
-        const id = e.target.getAttribute('data-id');
-  
-        // Send the delete request
-        fetch(`/api/cats/${id}`, {
-          method: 'DELETE',
-        }).then((res) => {
-          console.log(res);
-          console.log(`Deleted cat: ${id}`);
-  
-          // Reload the page
-          location.reload();
-        });
-      });
-    });
 });
