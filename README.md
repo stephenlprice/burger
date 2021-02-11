@@ -5,6 +5,8 @@
 
   ## Overview
   Eat-Da-Burger! is a restaurant app that lets users input the names of burgers they'd like to eat. It uses MySQL, Node, Express, Handlebars, and a homemade ORM (yum!).
+  
+  ### Visit the [deployed app](https://burger-io.herokuapp.com/)!
 
   ![layouts.png](./public/assets/img/layouts.png)
   <hr>
