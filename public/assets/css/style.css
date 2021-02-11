@@ -55,10 +55,16 @@ i.fas.fa-hamburger {
 
 div.hamburger i.fas.fa-hamburger:hover {
     color: #CF3721;
+    cursor: pointer;
 }
 
 span.change-devoured i:hover {
-    color: #31A9B8
+    color: #31A9B8;
+    cursor: pointer;
+}
+
+button.delete {
+    display: inline;
 }
 
 nav#heading {
@@ -73,6 +79,11 @@ button#add {
 button#add:hover {
     background-color: #FFFFFF;
     color: #CF3721;
+    cursor: pointer;
+}
+
+#devoured-check {
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 576px) {
