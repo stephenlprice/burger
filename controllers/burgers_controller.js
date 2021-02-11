@@ -19,9 +19,7 @@ router.get(`/api/burgers`, (req, res) => {
 });
 
 router.post('/api/burgers', (req, res) => {
-    console.log(req);
     burger.create(req.body.name, req.body.devoured, (response) => {
-        console.log('router.post', response);
         res.json({ id: response.id, burger: response.name, devoured: response. devoured});
     });
 });

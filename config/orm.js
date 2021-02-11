@@ -15,7 +15,6 @@ const insertOne = (name, devoured, data) => {
     connection.query(query, (err, result) => {
         if (err) { throw err; }
         data(result);
-        console.log('orm.insertOne', query);
     });
 };
 
@@ -28,7 +27,6 @@ const updateOne = (id, devoured, data) => {
         connection.query(query, (err, result) => {
             if (err) { throw err; }
             data(result);
-            console.log('orm.updateOne', query);
         });
     }
     else if (devoured === 'false') {
@@ -39,7 +37,6 @@ const updateOne = (id, devoured, data) => {
         connection.query(query, (err, result) => {
             if (err) { throw err; }
             data(result);
-            console.log('orm.updateOne', query);
         });
     }
 };

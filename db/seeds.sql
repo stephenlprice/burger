@@ -9,6 +9,6 @@ VALUES
 ("Mcdonald's Quarter Pounder", false),
 ("Wendy's Baconator", false),
 ("In-N-Out Double Double", false),
-("Dan's Hamburgers Double Meat", false);
+("Dan's Hamburgers", false);
 
 SELECT * FROM burger_db.burger;

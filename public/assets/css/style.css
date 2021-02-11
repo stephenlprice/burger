@@ -4,8 +4,14 @@ font-family: 'Roboto', sans-serif; */
 
 html {
     background:
+        linear-gradient(
+            /* Does not add any color but shades the image a bit darker */
+            rgba(0, 0, 0, 0.33), 
+            rgba(0, 0, 0, 0.33)
+        ),
         url(https://images.unsplash.com/photo-1526371233670-42d618efcec5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80) 
         no-repeat center center fixed;
+        background-color: rgba(0, 0, 0, 1);
     background-size: cover;
     height: 100%;
     overflow-y: auto;
@@ -61,10 +67,16 @@ div.hamburger i.fas.fa-hamburger:hover {
 span.change-devoured i:hover {
     color: #31A9B8;
     cursor: pointer;
-}x
+}
 
-nav#heading {
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,1);
+    border-color: rgba(255,255,255,1);
     background-color: #CF3721;
+}
+
+span.navbar-toggler-icon {
+    color: rgba(255,255,255,1);
 }
 
 button#add {

@@ -8,7 +8,6 @@ const burger = {
     },
     create(name, devoured, response) {
         orm.insertOne(name, devoured, (data) => {
-            console.log('burger.create', data);
             response(data);
         });
     },
