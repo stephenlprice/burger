@@ -4,10 +4,51 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   
     // UPDATE (eat/uneat the burger)
-    const devoured = document.querySelectorAll('span.change-devoured i');
+    const eatUneat = document.querySelectorAll('span.change-devoured i');
+    const burger = document.querySelectorAll('div.hamburger i');
   
-    if (devoured) {
-        devoured.forEach((button) => {
+    if (eatUneat) {
+      eatUneat.forEach((button) => {
+        button.addEventListener('click', (e) => {
+          const id = e.target.getAttribute('data-id');
+          let newEat = e.target.getAttribute('data-devoured');
+          console.log(newEat);
+          switch (newEat) {
+            case true:
+              newEat = false;
+              break;
+            
+            case false:
+              newEat = true;
+              break;
+          }
+  
+          const state = {
+            devoured: newEat,
+          };
+  
+          fetch(`/api/burgers/${id}`, {
+            method: 'PUT',
+            headers: {
+              Accept: 'application/json',
+              'Content-Type': 'application/json',
+            },
+            // Serializing the JSON body
+            body: JSON.stringify(state),
+          }).then((response) => {
+            if (response.ok) {
+              console.log(`changed devoured for: ${newEat}`);
+              location.reload('/');
+            } else {
+              alert('something went wrong!');
+            }
+          });
+        });
+      });
+    }
+
+    if (burger) {
+      burger.forEach((button) => {
         button.addEventListener('click', (e) => {
           const id = e.target.getAttribute('data-id');
           let newEat = e.target.getAttribute('data-devoured');
