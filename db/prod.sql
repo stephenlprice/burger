@@ -6,7 +6,6 @@ CREATE TABLE [prod database].burger (
     id INT(30) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(60) NOT NULL,
     devoured BOOLEAN NOT NULL,
-    createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 INSERT INTO [prod database].burger (name, devoured) 
