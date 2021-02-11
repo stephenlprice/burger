@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', (event) => {
+  // Initialize BootStrap tooltips (Popper)
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+  const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+  })
+
+  console.log(tooltipTriggerList);
+
+  // var exampleEl = document.getElementById('example')
+  // var tooltip = new bootstrap.Tooltip(exampleEl, options)
+
     if (event) {
       console.info('DOM loaded');
     }
