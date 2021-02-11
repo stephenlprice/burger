@@ -28,6 +28,10 @@ h2 {
     margin-bottom: 2px;
 }
 
+h2.devoured {
+    font-size: 3rem;
+}
+
 div.card {
     width: 100%;
 }
@@ -52,12 +56,7 @@ i.fas.fa-hamburger:hover {
     color: #CF3721;
 }
 
-button.change-devoured {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
-button.change-devoured:hover {
+span.change-devoured i:hover {
     color: #31A9B8
 }
 

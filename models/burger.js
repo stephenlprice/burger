@@ -3,7 +3,6 @@ const orm = require('../config/orm.js');
 const burger = {
     all(response) {
         orm.selectAll('burger', (data) => {
-            console.log('burger.all', data);
             response(data);
         });
     },
