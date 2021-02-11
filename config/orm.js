@@ -20,9 +20,7 @@ const insertOne = (name, devoured, data) => {
 };
 
 const updateOne = (id, devoured, data) => {
-    console.log('orm.updateOne', id, devoured);
     if (devoured === 'true') {
-        console.log('orm.updateOne', 'make false');
         const query = 
         `UPDATE burger_db.burger
         SET devoured = false
@@ -34,7 +32,6 @@ const updateOne = (id, devoured, data) => {
         });
     }
     else if (devoured === 'false') {
-        console.log('orm.updateOne', 'make true');
         const query = 
         `UPDATE burger_db.burger
         SET devoured = true

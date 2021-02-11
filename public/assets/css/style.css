@@ -52,7 +52,7 @@ i.fas.fa-hamburger {
     color: #F5BE41;;
 }
 
-i.fas.fa-hamburger:hover {
+div.hamburger i.fas.fa-hamburger:hover {
     color: #CF3721;
 }
 

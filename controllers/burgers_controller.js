@@ -27,14 +27,9 @@ router.post('/api/burgers', (req, res) => {
 
 router.put('/api/burgers/:id', (req,res) => {
     const id = req.params.id;
-    console.log('id: ', id);
-    console.log('req.body', req.body);
     burger.all((data) => {
-        console.log('router.put', data);
         for (let i = 0; i < data.length; i++) {
-            console.log('id:', data[i].id);
             if (Number(data[i].id) === Number(id)) {
-                console.log('matches', data[i].id);
                 burger.update(Number(id), req.body.devoured, (response) => {
                     if (response.changedRows === 0) {
                         return res.status(404).end();

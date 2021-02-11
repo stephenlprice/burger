@@ -14,7 +14,6 @@ const burger = {
     },
     update(id, devoured, response) {
         orm.updateOne(id, devoured, (data) => {
-            console.log('burger.update', data);
             response(data);
         });
     }
