@@ -1,30 +1,40 @@
 <!-- As a heading -->
 <nav id="heading" class="navbar navbar-dark">
-  <div class="container-fluid ">
+  <div class="container-fluid">
     <span class="navbar-brand mb-0 h1"><h1>BURGERS I/O</h1></span>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
   </div>
-    <div class="collapse" id="navbarToggleExternalContent">
+  <div class="collapse" id="navbarToggleExternalContent">
       <div class="p-4">
-        <h5 class="text-white h4">Collapsed content</h5>
-        <span class="text-muted">Toggleable via the navbar brand.</span>
+        <form class="text-white" id="create-form"></form>
+          <div class="row g-3 align-items-center">
+            <div class="col">
+              <h2 class="text-white">Add a Burger</h2>
+              <input type="text" id="burger" name="name" class="form-control" placeholder="Name" aria-label="Burger Name">
+            </div>
+            <div class="col">
+              <div class="form-check form-switch form-control-lg">
+                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                <label class="form-check-label text-white" for="flexSwitchCheckDefault">Eaten?</label>
+              </div>
+              <button id="add" type="submit" class="btn border-white"><i class="fas fa-plus-circle"></i> Add Burger</button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
 </nav>
 <br>
-
-
-
-<div class="container">
+<main class="container">
   <div class="row">
     <div class="col-12 col-sm-6">
-      <h2 class="d-flex justify-content-around">Uneaten Burgers</h2>
+      <h2 class="d-flex justify-content-around text-white">Uneaten Burgers</h2>
       <div class="row">
         {{#each burger}}
         {{#unless devoured}}
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 d-flex justify-content-center">
             {{> burger devoured=false}}
           </div>
         {{/unless}}
@@ -32,7 +42,7 @@
       </div>
     </div>
     <div class="col-12 col-sm-6">
-      <h2 class="d-flex justify-content-around">Eaten Burgers</h2>
+      <h2 class="d-flex justify-content-around text-white">Eaten Burgers</h2>
       <div class="row">
         {{#each burger}}
         {{#if devoured}}
@@ -43,23 +53,5 @@
         {{/each}}
       </div>
     </div>
-    <div class="col-12">
-      <h2>Add a Burger</h2>
-      <form id="create-form">
-          <div class="form-group">
-              <label for="burger">Name:</label>
-              <input type="text" id="burger" name="name">
-          </div>
-
-          <div class="form-group" action="/api/burgers" method="post">
-              <label for="eaten">Eaten</label>
-              <input type="radio" name="eaten" value="1" id="eaten" checked></input><br>
-              <label for="eaten">Uneaten</label>
-              <input type="radio" name="not-eaten" value="0" id="not-eaten">
-          </div>
-
-          <button type="submit">Add Burger</button>
-      </form>
-    </div>
   </div>
-</div>
+</main>

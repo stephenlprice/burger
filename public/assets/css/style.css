@@ -2,22 +2,39 @@
 font-family: 'Pacifico', cursive;
 font-family: 'Roboto', sans-serif; */
 
+html {
+    background:
+        url(https://images.unsplash.com/photo-1526371233670-42d618efcec5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80) 
+        no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow-y: auto;
+}
+
 body {
     font-family: 'Roboto', sans-serif;  
 }
 
 h1 {
-    font-size: xx-large;
     font-family: 'Pacifico', cursive;
     text-align: center;
 }
 
 h2 {
     font-family: 'Cookie', cursive;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    line-height: 30px;
+    margin-bottom: 2px;
 }
 
 div.card {
     width: 100%;
+}
+
+.form-check.form-switch {
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 
 .card-header {
@@ -46,4 +63,14 @@ button.change-devoured:hover {
 
 nav#heading {
     background-color: #CF3721;
+}
+
+button#add {
+    background-color: #CF3721;
+    color: #FFFFFF;
+}
+
+button#add:hover {
+    background-color: #FFFFFF;
+    color: #CF3721;
 }
