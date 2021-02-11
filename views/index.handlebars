@@ -42,13 +42,14 @@
         {{/each}}
       </div>
     </div>
+    <br>
     <div class="col-12 col-sm-6">
       <h2 class="devoured d-flex justify-content-around text-white">Eaten Burgers</h2>
       <br>
       <div class="row">
         {{#each burger}}
         {{#if devoured}}
-          <div class="col-12 col-md-6">
+          <div class="col-12 col-md-6 d-flex justify-content-center">
             {{> burger devoured=true}}
           </div>
         {{/if}}

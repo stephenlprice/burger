@@ -18,6 +18,7 @@ body {
 h1 {
     font-family: 'Pacifico', cursive;
     text-align: center;
+    font-size: 2.5rem;
 }
 
 h2 {
@@ -72,4 +73,16 @@ button#add {
 button#add:hover {
     background-color: #FFFFFF;
     color: #CF3721;
+}
+
+@media only screen and (max-width: 576px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    h1 {
+        font-size: 1.55rem;
+    }
 }
