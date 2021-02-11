@@ -61,11 +61,7 @@ div.hamburger i.fas.fa-hamburger:hover {
 span.change-devoured i:hover {
     color: #31A9B8;
     cursor: pointer;
-}
-
-button.delete {
-    display: inline;
-}
+}x
 
 nav#heading {
     background-color: #CF3721;
